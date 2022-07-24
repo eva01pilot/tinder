@@ -1,5 +1,4 @@
 import {firestore, storage, auth, STATE_CHANGED} from '../lib/firebase'
-import {collection, addDoc, Timestamp, batch} from 'firebase/firestore'
 import { useState, useEffect } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth'
 export default function AddInfo({ }) {
@@ -30,9 +29,7 @@ export default function AddInfo({ }) {
     batch.set(userDoc, { uid:auth.currentUser.uid, username: name, userage:age, usergender:gender, profilepic: downloadURL, description:description, liked:[], matched:[]  });
     await batch.commit();
     }
-  useEffect(()=>{
-    console.log(user)
-  })
+    
   return (
     <section>
         <form onSubmit={handleSubmit}>

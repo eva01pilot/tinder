@@ -1,0 +1,24 @@
+.CardContainer{
+    position: absolute;
+    left:45vw;
+    top:20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    width: 18.75rem;
+    height: 37.5rem;    
+    img{
+        width: 18.75rem;
+        height: 25rem;
+        object-fit: cover;
+    }
+    .Description{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 18.75rem;
+        height: 12.5rem;
+        background-color:aliceblue;
+    }
+}

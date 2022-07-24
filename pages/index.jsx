@@ -7,7 +7,7 @@ import DatingWindow from './Dashboard/Dating'
 export default function Home() {
   const {user, username} = useContext(UserContext)
   useEffect(()=>{
-    username && Router.push('./Dashboard/Dating')
+    username && Router.push('./Dashboard/DatesProvider')
   })
   return (
     <div>

@@ -5,22 +5,26 @@ import { auth } from '../../lib/firebase'
 import Link from "next/link"
 import Router from 'next/router'
 import { useEffect,useContext } from 'react'
+import styles from '../../styles/Dating.module.scss'
+import { useState } from "react"
 
 
-export default function DatingWindow() {
+export default function DatingWindow(props) {
   const {user, username} = useContext(UserContext)
   useEffect(()=>{
     !username && Router.push('../')
-  })
-    const userArray = useFetchDates()
+  },[username])
+
   return (
     <main>
       <Link href="/Dashboard/Chats"><a>Chats</a></Link>
-        {userArray.filter((user)=>user?.data?.uid!==auth?.currentUser?.uid).map((user)=>{
+      <div className={styles.DatesContainer}>
+        {props.userArray?.map((user,i)=>{
             return(
-                <DateCard key={user.id} sweetheart={user.data}/>
+                <DateCard onClick={props.onClick} key={user.id} data={i} sweetheart={user.data}/>
             )
         })}
+      </div>
     </main>
   )
 }
