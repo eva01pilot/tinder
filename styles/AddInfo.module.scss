@@ -1,0 +1,56 @@
+.FormContainer{
+    display: flex;
+    flex-direction: column;
+    width:100vw;
+    height: 100vh;
+    justify-content: center;
+    background-image: url('../public/flatpeople1.png');
+    form{
+        box-sizing: border-box;
+        width: 20rem;
+        height: 30rem;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        background-color: rgba(242, 247, 245, 0.815) ;
+        border: 1px solid rgb(179, 158, 158);
+        border-radius: 0.25rem;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.26);
+        padding: 3rem;
+        input[type="text"]{
+            outline: none;
+            border-radius: 0.5rem;
+            border: 1px solid black;
+            padding: 0.25rem;
+            margin-bottom: 1rem;
+            
+        }
+        input[type="radio"]{
+            margin-bottom: 1rem;
+        }
+        textarea{
+            resize: none;
+            margin-bottom: 1rem;
+        }
+    }
+    h3{
+        word-wrap: break-word;
+    }
+}
+.btn{
+    width: auto;
+    background-color:crimson;
+    border: none;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0.25rem;
+    cursor:pointer;
+}
+.inputfile{
+    display: none;
+}

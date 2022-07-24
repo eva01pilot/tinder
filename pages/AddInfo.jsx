@@ -1,6 +1,7 @@
 import {firestore, storage, auth, STATE_CHANGED} from '../lib/firebase'
 import { useState, useEffect } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth'
+import  styles from '../styles/AddInfo.module.scss'
 export default function AddInfo({ }) {
   const [name,setName] = useState("")
   const [age,setAge] = useState()
@@ -31,28 +32,28 @@ export default function AddInfo({ }) {
     }
     
   return (
-    <section>
+    <div className={styles.FormContainer}>
         <form onSubmit={handleSubmit}>
           <label htmlFor='username'>Введите имя</label>
-          <input required id='username' onChange={(e)=>setName(e.target.value)}/>
+          <input type="text" required id='username' onChange={(e)=>setName(e.target.value)}/>
           <label htmlFor='userage'>Введите свой возраст</label>
-          <input required id='userage' onChange={(e)=>setAge(e.target.value)}/>
-          <h1>Выберите пол</h1>
-          <label htmlFor='male'>Мужчина</label>
-          <input required type="radio" id='male' name='gender' value="male" onChange={(e)=>setGender(e.target.value)}/>
-          <label htmlFor='female'>Женщина</label>
-          <input required  type="radio" id='female' name='gender' value="female" onChange={(e)=>setGender(e.target.value)}/>
-          <textarea required onChange={(e) => setDescription(e.target.value)}
+          <input type="text" required id='userage' onChange={(e)=>setAge(e.target.value)}/>
+          <div className="GenderContainer">
+            <label htmlFor='male'>Мужчина</label>
+            <input required type="radio" id='male' name='gender' value="male" onChange={(e)=>setGender(e.target.value)}/>
+            <label htmlFor='female'>Женщина</label>
+            <input required  type="radio" id='female' name='gender' value="female" onChange={(e)=>setGender(e.target.value)}/>
+          </div>
+          <textarea rows="5" cols="30" maxLength="150" required onChange={(e) => setDescription(e.target.value)}
           placeholder='Расскажите о себе'
           value={description}/>
-          <label className="btn">
-            📸 Upload Img
-            <input type="file" onChange={uploadFile} accept="image/x-png,image/gif,image/jpeg" />
+          <label className={styles.btn}>
+            📸 Загрузите фотографию
+            <input className={styles.inputfile} type="file" onChange={uploadFile} accept="image/x-png,image/gif,image/jpeg" />
           </label>
-          <img src={downloadURL}/>
-          <h1>{downloadURL}</h1>
+          <h3>{downloadURL}</h3>
           <button type='submit'>Зарегистрироваться</button>
         </form>
-    </section>
+    </div>
   )
 }

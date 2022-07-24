@@ -4,10 +4,15 @@ export default function DateCard(props) {
         <div className={styles.CardContainer}>
           <img src={props.sweetheart?.profilepic} />
           <div className={styles.Description}>
-            <h1> {props.sweetheart?.username}</h1>
-            <h2> {props.sweetheart?.description}</h2>
+            <h1> {props.sweetheart?.username}, {props.sweetheart?.userage}</h1>
           </div>
-          <button onClick={props.onClick} data={props.data}>Pass</button>
+          <div className={styles.actions}>
+            <button onClick={props.onClick} data={props.data}>💔</button>
+            <button onClick={props.onClick} data={props.data}>😐</button>
+            <button onClick={props.onClick} data={props.data}>💝</button>
+          </div>
+         
+
         </div>
     )
   }

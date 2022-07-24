@@ -2,7 +2,6 @@ import DateCard from "../../Components/DateCard"
 import { useFetchDates } from "../../lib/hooks"
 import { UserContext } from '../../lib/context'
 import { auth } from '../../lib/firebase'
-import Link from "next/link"
 import Router from 'next/router'
 import { useEffect,useContext } from 'react'
 import styles from '../../styles/Dating.module.scss'
@@ -17,7 +16,9 @@ export default function DatingWindow(props) {
 
   return (
     <main>
-      <Link href="/Dashboard/Chats"><a>Chats</a></Link>
+      <div className={styles.matches}>
+          dfsdfkjsglsdj
+      </div>
       <div className={styles.DatesContainer}>
         {props.userArray?.map((user,i)=>{
             return(

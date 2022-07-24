@@ -11,6 +11,7 @@
   "dependencies": {
     "firebase": "^9.9.1",
     "next": "12.2.3",
+    "next-google-fonts": "^2.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-firebase-hooks": "^5.0.3",
