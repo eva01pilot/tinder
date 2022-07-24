@@ -1,0 +1,23 @@
+{
+    "users":[
+    {
+        "id":"1",
+        "Name":"Joanne Doe",
+        "Description":"Self made mamazilla",
+        "ProfilePic":"https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTc5OTUwMTA3MzE4Mjk3OTQ0/gettyimages-1061157246.jpg",
+        "coords":"123, 123"
+    },
+    {
+        "id":"2",
+        "Name":"Jane Doe",
+        "Description":"Self made mamazilla",
+        "ProfilePic":""
+    },
+    {
+        "id":"3",
+        "Name":"Jim Doe",
+        "Description":"Self made mamazilla",
+        "ProfilePic":""
+    }
+]
+}
