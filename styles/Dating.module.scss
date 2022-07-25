@@ -5,6 +5,7 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .matches{
     display: flex;
@@ -15,10 +16,14 @@
 }
 @media screen and (max-width:500px) {
     .matches{
-        width: 0px;
+        display: none;
     }
     .DatesContainer{
         width: 100vw;
     }
     
+}
+.maincontainer{
+    display: flex;
+    flex-direction: row;
 }
